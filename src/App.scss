@@ -1,22 +1,132 @@
+*{
+  margin: 0;
+}
+
 .container {
   background-color: rgb(0, 136, 209);
   color: white;
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  width: 50%;
+  margin: 0;
+  width: 100%;
+  height: 110vh;
 }
 
-.main {
+.title {
+  text-align: center;
+  width: fit-content;
   margin: auto;
+}
+
+.hr {
+  border-top: 4px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 
 }
 
-h1,
+
+h1 {
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 3rem;
+}
+
 h2 {
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding-top: 3rem; 
+}
+
+#counter {
+  margin: 0 1rem;
+}
+
+h3{
   text-align: center;
 }
 
+meter::-webkit-meter-bar {background: #e6e6e9;}
+meter::-webkit-meter-optimum-value {background: red;}
+meter::-webkit-meter-suboptimum-value{background:orange;}
+meter::-webkit-meter-even-less-good-value{background:green;}
+
+
+.render {
+  text-align: center;
+  padding-top: 6rem;
+}
+
+#robot,
+#brain {
+  width: 40px;
+}
+
+#robot {
+  padding-left: 1rem;
+}
+
+#brain {
+  padding-right: 1rem;
+}
+
+
 ul {
   list-style-type: none;
+  text-align: center;
+  background-color: rgb(5, 167, 255);
+  margin: auto;
+  display: flex;
+  width: 25rem;
+  flex-direction: column; 
+  justify-content: space-between;
+}
+
+ul li {
+  display: flex;
+  width: 25rem;
+  padding: 1rem 0;
+
+}
+
+#delete {
+  background-color: red;
+  border: white solid 2px;
+  color: white;
+  display: flex;
+}
+
+#deleteAll {
+  background-color: red;
+  color: white;
+  border: 2px solid white;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+#add {
+  background-color: rgb(5, 167, 255);
+  color: white;
+  border: 2px solid white;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+input {
+  height: 46px;
+}
+
+ul li p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 10rem;
+  min-width: 10rem;
+  text-align: left;
+  word-break:break-all;
 }
