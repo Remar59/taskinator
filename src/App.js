@@ -44,15 +44,18 @@ export default class App extends Component {
   }
 
   // suppression d'une tâche (nécessite un état checked, voir plus bas checkbox)
-  deleteTask(index) {
+  deleteTask() {
     const copyTasks = [...this.state.tasks];
-    if (copyTasks[index].checked) {
-      copyTasks.splice(index, 1);
-      this.setState({
-        tasks: copyTasks
-      });
+    const tasksToDelete = copyTasks.filter(task => task.checked);
+
+    if(tasksToDelete.length > 0) {
+        const updatedTasks = copyTasks.filter(task => !task.checked);
+
+        this.setState({
+          tasks: updatedTasks
+        });
     } else {
-      alert("Veuillez cocher la case devant la tâche afin de valider la suppression.")
+      alert("Veuillez cocher au moins une case afin de valider la suppression.");
     }
   }
 
